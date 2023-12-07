@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  ms_email:
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/ms_email
+    env_file:
+      - .env
+      - .env.test
+    external_links:
+      - host.docker.internal
