@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  email_microsservice:
+  email_ms:
     build: .
     ports:
       - "8080:8080"
@@ -14,7 +14,7 @@ services:
     external_links:
       - host.docker.internal
 
-  user_microsservice:
+  user_ms:
     image: ghcr.io/samuel-ricardo/ems_user:main
     ports:
       - "8081:8080"
@@ -22,3 +22,13 @@ services:
       - .env.user
     external_links:
       - host.docker.internal
+
+  user_postgres:
+    image: postgres
+    restart: always
+    env_file:
+      - .env.user
+    volumes:
+      - .docker/user/postgres:/data/postgres
+    ports:
+      - "5432:5432"
