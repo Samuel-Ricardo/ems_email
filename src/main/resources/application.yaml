@@ -1,0 +1,25 @@
+broker:
+  queue:
+    email:
+      name: default.email
+
+server:
+  port: 8081
+
+spring:
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:mem:ms_user}
+    username: ${POSTGRES_USER:admin}
+    password: ${POSTGRES_PASS:admin}
+    driver-class-name: ${POSTGRES_DRIVER:org.h2.Driver}
+
+  jpa:
+    database-platform: ${POSTGRES_DIALECT:org.hibernate.dialect.H2Dialect}
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
