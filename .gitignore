@@ -1,5 +1,6 @@
 .env
 .env.test
+.env.api
 
 # Compiled class file
 *.class
