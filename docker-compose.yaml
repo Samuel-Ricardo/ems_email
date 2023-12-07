@@ -23,6 +23,16 @@ services:
     external_links:
       - host.docker.internal
 
+  email_postgres:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .docker/email/postgres:/data/postgres
+    ports:
+      - "5432:5432"
+
   user_postgres:
     image: postgres
     restart: always
@@ -31,4 +41,16 @@ services:
     volumes:
       - .docker/user/postgres:/data/postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    depends_on:
+      - user_postgres
+    env_file:
+      - .env
+    volumes:
+      - .docker/pgadmin:/database/admin/pgadmin
+    ports:
+      - "5050:80"
