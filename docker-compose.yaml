@@ -4,6 +4,9 @@ services:
 
   email_ms:
     build: .
+    depends_on:
+      - email_postgres
+      - rabbitmq
     ports:
       - "8080:8080"
     volumes:
@@ -16,6 +19,9 @@ services:
 
   user_ms:
     image: ghcr.io/samuel-ricardo/ems_user:main
+    depends_on:
+      - user_postgres
+      - rabbitmq
     ports:
       - "8081:8080"
     env_file:
@@ -32,6 +38,8 @@ services:
       - .docker/email/postgres:/data/postgres
     ports:
       - "5432:5432"
+    external_links:
+      - host.docker.internal
 
   user_postgres:
     image: postgres
@@ -41,7 +49,9 @@ services:
     volumes:
       - .docker/user/postgres:/data/postgres
     ports:
-      - "5433:5432"
+      - "5431:5432"
+    external_links:
+      - host.docker.internal
 
   pgadmin:
     image: dpage/pgadmin4
@@ -54,6 +64,8 @@ services:
       - .docker/pgadmin:/database/admin/pgadmin
     ports:
       - "5050:80"
+    external_links:
+      - host.docker.internal
 
   rabbitmq:
     image: rabbitmq:management
@@ -63,6 +75,8 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    external_links:
+      - host.docker.internal
 
 networks:
   default:
