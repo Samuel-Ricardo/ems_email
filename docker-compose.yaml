@@ -54,3 +54,16 @@ services:
       - .docker/pgadmin:/database/admin/pgadmin
     ports:
       - "5050:80"
+
+  rabbitmq:
+    image: rabbitmq:management
+    env_file:
+      - .env
+      - .env.test
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+networks:
+  default:
+    driver: bridge
