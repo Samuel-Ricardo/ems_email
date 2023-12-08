@@ -8,7 +8,7 @@ services:
       - email_postgres
       - rabbitmq
     ports:
-      - "8080:8080"
+      - "8081:8081"
     volumes:
       - .:/ms_email
     env_file:
@@ -23,7 +23,7 @@ services:
       - user_postgres
       - rabbitmq
     ports:
-      - "8081:8080"
+      - "8080:8080"
     env_file:
       - .env.user
     external_links:
