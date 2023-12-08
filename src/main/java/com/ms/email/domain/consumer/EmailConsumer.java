@@ -5,5 +5,7 @@ import com.ms.email.domain.dto.EmailDTO;
 import java.util.function.Consumer;
 
 public interface EmailConsumer {
-    void listenEmailQueue(EmailDTO DTO);
+    //void listenEmailQueue(EmailDTO DTO);
+
+    void sendEmailFromQueue(EmailDTO dto);
 }
