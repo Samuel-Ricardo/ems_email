@@ -1,7 +1,9 @@
 package com.ms.email.domain.entity;
 
+import com.ms.email.domain.dto.EmailDTO;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
 import static jakarta.persistence.GenerationType.UUID;
 
@@ -26,4 +28,9 @@ public class Email implements Serializable {
     private LocalDateTime sendDateEmail;
     private EmailStatus status;
 
+    public static Email from(EmailDTO dto) {
+        var email = new Email();
+        BeanUtils.copyProperties(dto, email);
+        return email;
+    }
 }
