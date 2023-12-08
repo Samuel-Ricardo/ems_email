@@ -4,11 +4,18 @@ import com.ms.email.domain.consumer.EmailConsumer;
 import com.ms.email.domain.dto.EmailDTO;
 import org.springframework.stereotype.Component;
 
+import java.util.function.Consumer;
+
 @Component
 public class RabbitMQEmailConsumer implements EmailConsumer {
 
     @Override
-    public void consumeFromEmailQueue(EmailDTO DTO) {
+    public void listenEmailQueue(EmailDTO DTO) {
         
+    }
+
+    @Override
+    public void consumeFromEmailQueue(Consumer<EmailDTO> consumer) {
+
     }
 }
