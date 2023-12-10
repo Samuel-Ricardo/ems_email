@@ -8,6 +8,10 @@ server:
 
 spring:
 
+  mail:
+    username: ${OFFICIAL_EMAIL_ACCOUNT_USER:account@mail.com}
+    password: ${OFFICIAL_EMAIL_ACCOUNT_PASS:123}
+
   datasource:
     url: ${DATABASE_URL:jdbc:h2:mem:ms_user}
     username: ${POSTGRES_USER:admin}
