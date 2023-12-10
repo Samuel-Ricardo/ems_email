@@ -11,7 +11,7 @@ public class SendEmailUseCase {
 
     @Autowired private JavaMailSender mailSender;
 
-    public void execute(Email email) {
+    public Email execute(Email email) {
         var message = new SimpleMailMessage();
 
         message.setTo(email.getEmailTo());
@@ -19,5 +19,6 @@ public class SendEmailUseCase {
         message.setText(email.getTextBody());
 
         mailSender.send(message);
+        return email;
     }
 }
