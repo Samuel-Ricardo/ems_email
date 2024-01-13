@@ -136,12 +136,76 @@ Email Microservice - [EMAIL]
 
 <h3> 🌱 | Example </h3>
 
-> <img src="./READEME_FILES/demo1.png"/>
-> <img src="./READEME_FILES/demo2.png"/>
-> <img src="./READEME_FILES/demo3.png"/>
-> <img src="./READEME_FILES/demo4.png"/>
+> <img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/demo1.png"/>
+> <img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/demo2.png"/>
+> <img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/demo3.png"/>
+> <img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/demo4.png"/>
+
+<br>
+
+#
+
+<h2 id="run-project"> 
+   👨‍💻 | How to use
+</h2>
+
+<br>
+
+### Open your Git Terminal and clone this repository
+
+```git
+  $ git clone "git@github.com:Samuel-Ricardo/ems_email.git"
+```
+
+### Make Pull
+
+```git
+  $ git pull "git@github.com:Samuel-Ricardo/ems_email.git"
+```
+
+<br>
+
+This application use `Docker` so you dont need to install and cofigurate anything other than docker on your machine.
+
+> <a target="_blank" href="https://www.docker.com/"> <img width="48px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" /> </a>
+
+<br>
+
+Navigate to project folder and run it using `docker-compose`
+
+```bash
+
+  # After setup docker environment just run this commmand on root project folder:
+
+  $ docker-compose up --build   # For First Time run this command
+
+  $ docker-compose up           # to run project
 
 
+```
+
+```bash
+
+  #Apps Running on:
+
+  $ USER: http://localhost:8080 - [MICROSERVICE] | [USER]
+  $ EMAIL: http://localhost:8081 - [MICROSERVICE] | [EMAIL]
+  
+  $ SWAGGER: http://localhost:8080/swagger-ui/index.html - [DOCS]
+
+
+  $ PostgreSQL: http://localhost:5431 - [DATABASE] | [USER]
+  $ PostgreSQL: http://localhost:5432 - [DATABASE] | [EMAIL]
+  
+  $ PGAdmin: http://localhost:5050 - [DATABASE] | [VIEW]
+
+
+  $ RabbitMQ: :5672 - [BROKER]  
+  $ RabbitMQ: http://localhost:15672 - [BROKER] | [VIEW]
+
+  See more: docker-compose.yaml
+
+```
 
 <br>
 
