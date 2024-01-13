@@ -132,3 +132,17 @@ Email Microservice - [EMAIL]
   The broker is an intermediary between microservices, it receives events and store in a Queue Data Structure that is triggered and can be consumed by other microservices that are waiting for it to react.
 </p>
 
+<br>
+
+<h3> 🌱 | Example </h3>
+
+> <img src="./READEME_FILES/demo1.png"/>
+> <img src="./READEME_FILES/demo2.png"/>
+> <img src="./READEME_FILES/demo3.png"/>
+> <img src="./READEME_FILES/demo4.png"/>
+
+
+
+<br>
+
+#
