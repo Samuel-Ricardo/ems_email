@@ -50,6 +50,42 @@ Email Microservice - [EMAIL]
     This application is an implementation of a Microservices Architecture using RabbitMQ for queue communication and the best practices of Clean Architecture, SOLID and DDD, all documented. Use Docker to handle the entire system structure.
 </p>
 
-:octocat: | Email Microservice: [ https://github.com/Samuel-Ricardo/ems_email ]
+:octocat: | User Microservice: [ https://github.com/Samuel-Ricardo/ems_user ]
 
 <br>
+
+<h2 id="techs">
+| 🏗️ - Technologies and Concepts Studied:
+</h2>
+
+> <a href='https://spring.io/'> <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" /> </a>
+
+<br>
+
+- Spring Framework
+- RabbitMQ
+- PostgreSQL
+- Docker
+- Microservice
+- Communication Between Microservices
+- Email SMTP
+- Maven
+- REST
+- Swagger
+- Validation
+- Lombok
+- Environment
+- Clean Architeture
+- DDD
+- JUnit
+- H2 Database
+- Error Handler
+
+> Among Others...
+<br>
+
+#
+
+<h2 id="app">
+  💻 | Application:
+</h2>
