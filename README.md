@@ -41,3 +41,15 @@ Email Microservice - [EMAIL]
 </h1>
 
 <br>
+
+<p id="project"/>
+
+<h2> | 🛰️ About:  </h2>
+
+<p align="justfy">
+    This application is an implementation of a Microservices Architecture using RabbitMQ for queue communication and the best practices of Clean Architecture, SOLID and DDD, all documented. Use Docker to handle the entire system structure.
+</p>
+
+:octocat: | Email Microservice: [ https://github.com/Samuel-Ricardo/ems_email ]
+
+<br>
