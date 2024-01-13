@@ -89,3 +89,13 @@ Email Microservice - [EMAIL]
 <h2 id="app">
   💻 | Application:
 </h2>
+
+<img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/preview_arch.png"/>
+
+<br>
+
+<p>
+    Giving an overview, this architecture is divided into User Microservice and Email Microservice, each with its own databases, communication between them occurs through a broker which in this case is based on asynchronous queues managed by RabbitMQ
+</p>
+
+ <br>
