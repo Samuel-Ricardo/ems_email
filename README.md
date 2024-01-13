@@ -98,4 +98,16 @@ Email Microservice - [EMAIL]
     Giving an overview, this architecture is divided into User Microservice and Email Microservice, each with its own databases, communication between them occurs through a broker which in this case is based on asynchronous queues managed by RabbitMQ
 </p>
 
+<br>
+
+<h3> 🕺 | User </h3>
+
+:shipit: | Repository: [ https://github.com/Samuel-Ricardo/ems_user ]
+
+<br>
+
+  <p>
+    The main function of User Microservice is to list and register users in a database. When a user is saved in this MS, it publishes this event to the broker.
+  </p>
+
  <br>
