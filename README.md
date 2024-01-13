@@ -111,3 +111,15 @@ Email Microservice - [EMAIL]
   </p>
 
  <br>
+
+<h3> 📧 | Email </h3>
+
+:shipit: | Repository: [ https://github.com/Samuel-Ricardo/ems_email ]
+
+  <br>
+
+  <p>
+    The main function of the Email Microservice is to send a welcome email to new users, for this it listens to the broker, when a created user event is published this MS consumes this event and sends an email to this new created user welcoming . 
+  </p>
+
+ <br>
