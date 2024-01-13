@@ -1,16 +1,30 @@
+server:
+  port: 8081
+
 broker:
   queue:
     email:
       name: default.email
 
-server:
-  port: 8081
-
 spring:
 
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_DEFAULT_USER}
+    password: ${RABBITMQ_DEFAULT_PASS}
+
   mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
     username: ${OFFICIAL_EMAIL_ACCOUNT_USER:account@mail.com}
     password: ${OFFICIAL_EMAIL_ACCOUNT_PASS:123}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
   datasource:
     url: ${DATABASE_URL:jdbc:h2:mem:ms_user}

@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 @Component
 public class SetupEmailUseCase {
 
-    @Value(value = "${spring.mail.username}")
-    private String officialAccount;
+    @Value("${spring.mail.username}")
+    private String officialAccount="a@mail.com";
 
     public Email execute(Email email) {
         email.setSendDateEmail(LocalDateTime.now());
