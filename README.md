@@ -123,3 +123,12 @@ Email Microservice - [EMAIL]
   </p>
 
  <br>
+
+<h3> 📮 | Broker </h3>
+
+<img src="https://github.com/Samuel-Ricardo/ems_user/raw/main/READEME_FILES/broker.png"/>
+
+<p>
+  The broker is an intermediary between microservices, it receives events and store in a Queue Data Structure that is triggered and can be consumed by other microservices that are waiting for it to react.
+</p>
+
